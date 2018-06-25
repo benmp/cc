@@ -1,0 +1,10 @@
+{{ $data := .Site.Data.data }}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="{{ with .Site.Params.description }}{{ . }}{{ end }}">
+<meta name="author" content="{{ with .Site.Params.name }}{{ . }}{{ end }}">
+{{ .Hugo.Generator }}
+<title>{{ .Site.Title }}</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{{ .Site.BaseURL }}css/all.css">
+

@@ -1,0 +1,29 @@
+{{ $data := .Site.Data.data }}
+<nav class="bg-4">
+  <div class="flex items-center justify-center flex-no-shrink text-white p-6">
+    <img class="fill-current h-24 w-24 r-2" src="img/11.png"/img>
+    <div class="items-center w-100">
+      <span class="font-semibold text-5xl">Carriage Controls</span>
+      <span class="font-semibold text-3xl pt-6">LLC</span>
+    </div>
+  </div>
+  <div class="flex justify-center items-center bg-5 text-xl">
+    <a href="#responsive-header" class="m-5 text-teal-lighter hover:text-white">
+      Capabilities
+    </a>
+    <a href="#responsive-header" class="m-5 text-teal-lighter hover:text-white">
+      Programming
+    </a>
+    <a href="#responsive-header" class="m-5 text-teal-lighter hover:text-white">
+      Control Solutions
+    </a>
+  </div>
+</nav>
+
+
+{{ range .Data.Pages }}
+  {{ if (eq .Type "about") }}
+    {{ .Content }}
+  {{ end }}
+{{ end }}
+
